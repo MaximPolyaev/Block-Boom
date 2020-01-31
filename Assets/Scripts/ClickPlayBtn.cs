@@ -19,7 +19,6 @@ public class ClickPlayBtn : MonoBehaviour
     private RectTransform titleGameRT;
 
     
-    // public bool startMove = false;
     
     
     private void OnMouseDown()
