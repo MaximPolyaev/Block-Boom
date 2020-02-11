@@ -10,7 +10,6 @@ public class ClickPlayBtn : MonoBehaviour
     public float clickSizeY;
     public float speedRemoveTitle;
     public Component titleGame;
-    public Component scripts;
 
     private float initialSizeX;
     private float initialSizeY;
@@ -31,9 +30,6 @@ public class ClickPlayBtn : MonoBehaviour
         transform.localScale = new Vector3(initialSizeX, initialSizeY, 0f);
 
         removeTitle = true;
-
-        scripts.GetComponent<BtnLeftRightController>().SetActiveBtns(true);
-        
     }
 
     private void Start()

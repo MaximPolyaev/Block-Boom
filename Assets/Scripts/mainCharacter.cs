@@ -6,9 +6,6 @@ public class mainCharacter : MonoBehaviour
     public float speedCamera;
     public GameObject mainCamera;
     public GameObject gameOverTextObject;
-    public TrajectoryRenderer trajRen;
-    private Vector2 speedTR;
-    public bool viewTr = false;
 
     private bool movingCamera = false;
     private bool movingMainChapter = false;
@@ -32,14 +29,11 @@ public class mainCharacter : MonoBehaviour
         transform.position = nowPosMainCharacter;
 
         fixedDistanceY = Math.Abs(nowPosMainCharacter.y);
-
-        speedTR = new Vector2(1f, 2f);
     }
 
     // Update is called once per frame
     private void Update()
     {
-        trajRen.ShowTrajectory(transform.position, speedTR);
         movingMainChapter = rb.velocity.magnitude != 0 ? true : false;
 
         float distanceY = Math.Abs(mainCamera.transform.position.y - transform.position.y);
