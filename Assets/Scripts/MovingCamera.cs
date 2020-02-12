@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-public class mainCharacter : MonoBehaviour
+public class MovingCamera : MonoBehaviour
 {
     public float speedCamera;
     public GameObject mainCamera;
