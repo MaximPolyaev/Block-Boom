@@ -5,7 +5,6 @@ public class mainCharacter : MonoBehaviour
 {
     public float speedCamera;
     public GameObject mainCamera;
-    public GameObject gameOverTextObject;
 
     private bool movingCamera = false;
     private bool movingMainChapter = false;
@@ -25,8 +24,6 @@ public class mainCharacter : MonoBehaviour
         Vector3 nowPosMainCharacter = transform.position;
         nowPosMainCharacter.x = mainCamera.transform.position.x;
         nowPosMainCharacter.y = (mainCamera.transform.position.y + Math.Abs(bottomWallCordY)) * -0.7f;
-
-        transform.position = nowPosMainCharacter;
 
         fixedDistanceY = Math.Abs(nowPosMainCharacter.y);
     }
@@ -76,9 +73,5 @@ public class mainCharacter : MonoBehaviour
         
         float nowBottomWallCordY = cameraComponent.ScreenToWorldPoint(new Vector2(0, 0)).y;
         bottomWallCordY = nowBottomWallCordY > bottomWallCordY ? nowBottomWallCordY : bottomWallCordY;
-        if (transform.position.y < bottomWallCordY)
-        {
-            gameOverTextObject.transform.gameObject.SetActive(true);
-        }
     }
 }
